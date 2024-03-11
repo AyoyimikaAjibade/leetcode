@@ -6,11 +6,11 @@
 # in the window. If there is no such substring, return the empty string ''
 
 # Steps to solve:
-# 1. use hashmpa to set the t_dict and s_dict to track the char frequency
-# 2. edge case if t is an empty string return empty string
+# 1. use hashmap to set the t_dict and s_dict to track the char frequency
+# 2. edge case if 't' is an empty string return empty string
 # 3. store the value and frequency of t characters in t_dict
 # 4. initialize the left and right pointer as usual
-# 5. initialize min_window and min_win_len to track te windos pointers and its length
+# 5. initialize min_window and min_win_len to track te windows pointers and its length
 # 6. initialize s_dict_len and t_dict_len for update and comparison
 # 7. upon iteration create and update s_dict based on the right pointer value
 # 8. if right pointer value in t_dict and s_dict right pointer value is same as t_dict right pointer value
@@ -21,10 +21,10 @@
 # 13. also update the min_win_len by the length of the left and right pointer value
 # 14. if the current window length is greater than previous window length 
 # 15. we shrink our window by decreasing the left value from the s_dict
-# 16. if also the left pointer value was previously in the current window and the left 
-# pointer value in the s_dict is lesser than the t_dict and decrease the s_dict_lens
+# 16. if also the left pointer value was previously in the t_dict and the left 
+# pointer value in the s_dict is lesser than the t_dict we decrease the s_dict_lens
 # 17. otherwise shift the left pointer forward
-# 18. since the min_wind contains the minumun string with the correct right and left pointer respectively
+# 18. since the min_win contains the minumun string with the correct right and left pointer respectively
 # 19. extraoplate and return the right and left pointer values from s respectively
 def minWindow(s, t):
     if t == '':
