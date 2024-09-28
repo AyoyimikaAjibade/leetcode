@@ -1,0 +1,21 @@
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+def main():
+    arr = [3, 5, 7, 9, 11]
+    x = 7
+    result = linear_search(arr, x)
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+# O(n) linear time, since the running time is directly proportional to the size of the input. 
+# If the input size is n, the linear search will take n steps to complete.
+
+# O(1) linear space complexity, This linear search algorithm has a space complexity of O(1), 
+# since it only requires a constant amount of memory regardless of the size of the input. 
+# It creates a single variable (i) to store the loop index, but the memory required for this variable is constant.

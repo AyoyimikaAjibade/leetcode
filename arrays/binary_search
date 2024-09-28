@@ -1,0 +1,28 @@
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (high + low) // 2
+        if arr[mid] < x:
+            low = mid + 1
+        elif arr[mid] > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
+
+
+
+
+def main():
+    arr = [2, 3, 4, 10, 40]
+    x = 10
+    result = binary_search(arr, x)
+    print(result)
+
+if __name__ == "__main__":
+    main()
+
+# O(logn) is a logarithmic time complexity. since the running time increases logarithmically with the size of the input. 
+# If the input size is n, it will take approximately (logn) steps to complete the binary search
